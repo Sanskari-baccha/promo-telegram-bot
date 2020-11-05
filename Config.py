@@ -12,7 +12,7 @@ class Config():
     SUDO_USERS = list(set(SUDO_USERS))
   else:
     BOT_TOKEN = "1414373170:AAH_AIw2NeKE5otP_F3kByC5H-YeVqlZwu0"
-    DATABASE_URL = ""
+    DATABASE_URL = os.environ.get("DATABASE_URL", None)
     APP_ID = "1892134"
     API_HASH = "ea68d40de71207514a2c7ab37c1bbe2b"
     SUDO_USERS = list(set(int(x) for x in ''.split()))
